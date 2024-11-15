@@ -18,6 +18,30 @@ namespace App1
             this.BindingContext = this;
         }
 
-        
+        private void OnSpeciesSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+                return;
+
+            switch (e.SelectedItem.ToString())
+            {
+                case "Pies":
+                    AgeSlider.Maximum = 18;
+                    break;
+                case "Kot":
+                    AgeSlider.Maximum = 20;
+                    break;
+                case "Świnka morska":
+                    AgeSlider.Maximum = 9;
+                    break;
+            }
+        }
+
+        private void OnAgeSliderChanged(object sender, ValueChangedEventArgs e)
+        {
+            AgeLabel.Text = ((int)e.NewValue).ToString();
+        }
+
+      
     }
 }
