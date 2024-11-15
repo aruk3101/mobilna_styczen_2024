@@ -4,14 +4,11 @@
              x:Class="App1.MainPage"
              BackgroundColor="#90EE90">
 
-    <StackLayout Padding="10">
+    <StackLayout>
 
         <Label Text="Wizyta u weterynarza"
                BackgroundColor="#2E8B57"
                FontSize="Large"
-               TextColor="White"
-               HorizontalOptions="Center"
-               VerticalOptions="Start"
                Padding="10" />
 
         <Entry Placeholder="Imię i nazwisko właściciela..."
