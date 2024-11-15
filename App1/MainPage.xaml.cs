@@ -10,11 +10,12 @@ namespace App1
 {
     public partial class MainPage : ContentPage
     {
-       
+        public List<string> SpeciesList { get; set; }
         public MainPage()
         {
             InitializeComponent();
-           
+            SpeciesList = new List<string> { "Pies", "Kot", "Świnka morska" };
+            this.BindingContext = this;
         }
 
         
