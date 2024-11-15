@@ -42,6 +42,12 @@ namespace App1
             AgeLabel.Text = ((int)e.NewValue).ToString();
         }
 
-      
+        private void OnOkClicked(object sender, EventArgs e)
+        {
+
+            string result = $"Właściciel: {OwnerEntry.Text}, Gatunek: {SpeciesListView.SelectedItem?.ToString()}, Wiek: {AgeLabel.Text}, Cel: {PurposeEntry.Text}, Czas wizyty: {VisitTimePicker.Time}";
+
+            ResultLabel.Text = result;
+        }
     }
 }
